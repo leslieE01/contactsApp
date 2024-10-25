@@ -41,14 +41,18 @@ public class FirebaseActivity extends AppCompatActivity {
             c3.uuid = UUID.randomUUID().toString();;
 
             Contact c4 = new Contact("Henry","123450");
-            c4.uuid = UUID.randomUUID().toString();;
+            c4.uuid = UUID.randomUUID().toString();
+
+            Contact c5 = new Contact("Keny","13250");
+            c5.uuid = UUID.randomUUID().toString();;
 
 
             //myRef.child(String.valueOf(c1.uuid)).setValue(c1);
            // myRef.child(String.valueOf(c2.uuid)).setValue(c2);
             //myRef.child(String.valueOf(c3.uuid)).setValue(c3);
 
-            myRef.child(String.valueOf(c4.uuid)).setValue(c4);
+           // myRef.child(String.valueOf(c4.uuid)).setValue(c4);
+            myRef.child(String.valueOf(c5.uuid)).setValue(c5);
 
             Toast.makeText(FirebaseActivity.this, "Información enviada", Toast.LENGTH_SHORT).show();
 
