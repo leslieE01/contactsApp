@@ -25,6 +25,8 @@ public class Contact {
     public String imagePath;
     public String uuid;
 
+    public Contact(){}
+
     public Contact(String name, String phone) {
         this.name = name;
         this.phone = phone;
