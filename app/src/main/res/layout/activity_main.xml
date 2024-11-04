@@ -20,6 +20,17 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rvContacts" />
+        android:id="@+id/rvContacts" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    /*<ProgressBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="visible"/>*/
+
+
 
 </RelativeLayout>
