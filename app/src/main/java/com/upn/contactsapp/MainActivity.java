@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadContacts(int page) {
         if (isLoading) return;  // Evita duplicar llamadas si ya se está cargando una página
+
         isLoading = true;
-
-
+        adaptar.setLoading(true); // Muestra el ítem de carga
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://66d5b903f5859a7042673752.mockapi.io")
@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("MAIN_APP", "Tamaño actual de elementos: " + elementos.size());
 
                     isLoading = false;
+                    adaptar.setLoading(false); // Oculta el ítem de carga
                     currentPage++;  // Incrementar el número de página para la próxima carga
                 }
             }
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<List<Contact>> call, Throwable throwable) {
                 Log.e("MAIN_APP", throwable.getMessage());
                 isLoading = false;
+                adaptar.setLoading(false); // Oculta el ítem de carga en caso de error
             }
         });
     }
